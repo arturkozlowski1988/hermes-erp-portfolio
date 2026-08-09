@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artur Kozłowski — Hermes Agent dla operacji ERP</title>
+  <meta name="description" content="Portfolio case study Artura Kozłowskiego: wielowarstwowy system operacyjny oparty na Hermes Agent, który łączy pocztę, eMU, Telegram Mini Apps, bazę wiedzy, Kanban i specjalistycznego tech-workera.">
+  <meta name="theme-color" content="#07110f">
+  <meta name="author" content="Artur Kozłowski">
+  <link rel="canonical" href="https://arturkozlowski1988.github.io/hermes-erp-portfolio/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Artur Kozłowski — Hermes Agent dla operacji ERP",
+        "url": "https://arturkozlowski1988.github.io/hermes-erp-portfolio/",
+        "inLanguage": "pl",
+        "author": { "@type": "Person", "name": "Artur Kozłowski" }
+      },
+      {
+        "@type": "Person",
+        "name": "Artur Kozłowski",
+        "url": "https://arturkozlowski1988.github.io/hermes-erp-portfolio/",
+        "sameAs": ["https://github.com/arturkozlowski1988"],
+        "jobTitle": "Konsultant ERP · projektant workflowów AI",
+        "description": "Projektuje produkcyjne systemy AI dla operacji ERP: poczta, portal eMU, baza wiedzy, Telegram Mini Apps i multi-agent Kanban."
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Hermes Agent dla operacji ERP — case study",
+        "about": {
+          "@type": "SoftwareApplication",
+          "name": "Hermes Agent",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "WSL2"
+        },
+        "author": { "@type": "Person", "name": "Artur Kozłowski" },
+        "inLanguage": "pl",
+        "datePublished": "2026-08-08",
+        "dateModified": "2026-08-09"
+      }
+    ]
+  }
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hermes Agent dla operacji ERP — Artur Kozłowski">
+  <meta property="og:description" content="Od sygnału w e-mailu lub eMU do kontrolowanej decyzji, technicznej analizy i zweryfikowanego raportu.">
+  <meta property="og:url" content="https://arturkozlowski1988.github.io/hermes-erp-portfolio/">
+  <meta property="og:image" content="https://arturkozlowski1988.github.io/hermes-erp-portfolio/assets/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hermes Agent dla operacji ERP — Artur Kozłowski">
+  <meta name="twitter:description" content="Poczta, eMU, Mini Apps, baza wiedzy i tech-worker w jednym audytowalnym workflow.">
+  <meta name="twitter:image" content="https://arturkozlowski1988.github.io/hermes-erp-portfolio/assets/img/social-card.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#hero" aria-label="Artur Kozłowski — początek strony">
+      <span class="brand-mark" aria-hidden="true"><span>AK</span></span>
+      <span class="brand-copy">
+        <strong>Artur Kozłowski</strong>
+        <small>AI operations × ERP</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz nawigację">
+      <span></span><span></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Główna nawigacja">
+      <a href="#operating-system">System</a>
+      <a href="#workflows">Workflowy</a>
+      <a href="#mini-apps">Mini Apps</a>
+      <a href="#cron-control">Automatyzacje</a>
+      <a href="#incidents">Incydenty</a>
+      <a href="#about">O mnie</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="text-button" type="button" data-open-english>EN summary</button>
+      <a class="header-github" href="https://github.com/arturkozlowski1988/hermes-erp-portfolio" target="_blank" rel="noopener noreferrer">
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="hero" class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow"><span class="status-dot"></span> CASE STUDY · SYSTEM DZIAŁAJĄCY PRODUKCYJNIE</p>
+        <h1 id="hero-title">Zbudowałem system, który nie tylko odpowiada.<br><em>Prowadzi sprawę do decyzji.</em></h1>
+        <p class="hero-lead">Hermes Agent łączy moją pocztę, portal eMU, bazę wiedzy, Telegram i specjalistycznego tech-workera. Każdy sygnał przechodzi przez kontrolowany workflow — od rozpoznania kontekstu do draftu, analizy technicznej albo gotowego raportu.</p>
+        <div class="hero-cta">
+          <a class="button button-primary" href="#workflows">Zobacz pełny workflow <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="https://github.com/arturkozlowski1988/hermes-erp-portfolio" target="_blank" rel="noopener noreferrer">Dokumentacja na GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="hero-proof" aria-label="Najważniejsze parametry systemu">
+          <li><strong>43</strong><span>aktywne crony</span></li>
+          <li><strong>22</strong><span>zadania agentowe</span></li>
+          <li><strong>15 min</strong><span>najkrótszy cykl</span></li>
+          <li><strong>100%</strong><span>human approval dla wysyłki</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-console" data-reveal>
+        <div class="console-topbar">
+          <span class="console-lights"><i></i><i></i><i></i></span>
+          <span>HERMES · OPERATIONS FEED</span>
+          <span class="console-live"><i></i> LIVE</span>
+        </div>
+        <div class="console-body">
+          <div class="console-time"><span>08:03</span><small>email-to-task-scan</small></div>
+          <div class="console-route">
+            <div class="route-item route-email">
+              <span class="route-icon">01</span>
+              <div><small>ŹRÓDŁO</small><strong>Nowy e-mail</strong><p>kontekst wątku + załączniki</p></div>
+              <span class="route-state">odczyt</span>
+            </div>
+            <span class="route-connector"><i></i></span>
+            <div class="route-item route-agent">
+              <span class="route-icon">02</span>
+              <div><small>ORKIESTRATOR</small><strong>Hermes Agent</strong><p>klasyfikacja + baza wiedzy</p></div>
+              <span class="route-state">analiza</span>
+            </div>
+            <span class="route-connector"><i></i></span>
+            <div class="route-item route-decision">
+              <span class="route-icon">03</span>
+              <div><small>DECISION HUB</small><strong>Telegram Mini App</strong><p>draft · zadanie · tech-worker</p></div>
+              <span class="route-state route-state-wait">czeka na mnie</span>
+            </div>
+          </div>
+          <div class="console-footer">
+            <div><span>QUEUE</span><strong>03</strong></div>
+            <div><span>SAFETY GATES</span><strong>05</strong></div>
+            <div><span>PROD WRITES</span><strong>0</strong></div>
+          </div>
+        </div>
+        <div class="hero-phone" aria-hidden="true">
+          <div class="phone-speaker"></div>
+          <div class="phone-screen">
+            <div class="phone-appbar"><span>‹</span><strong>Hermes</strong><span>•••</span></div>
+            <div class="mini-banner"><small>NOWA PROPOZYCJA</small><strong>Analiza techniczna zgłoszenia</strong></div>
+            <div class="mini-source"><span>📧</span><div><small>ŹRÓDŁO</small><strong>E-mail klienta</strong></div><b>87%</b></div>
+            <div class="mini-task"><small>CO ZROBI TECH-WORKER</small><p>Sprawdzi schemat, przeanalizuje SQL i przygotuje zweryfikowany raport.</p></div>
+            <div class="mini-actions"><button type="button" tabindex="-1">Wyślij do tech-worker</button><button type="button" tabindex="-1">Draft odpowiedzi</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signal-strip" aria-label="Główna zasada systemu">
+      <div class="signal-track">
+        <span>READ-ONLY DEFAULT</span><i></i><span>PROPOSAL FIRST</span><i></i><span>HUMAN APPROVAL</span><i></i><span>VERIFIED OUTPUT</span><i></i><span>AUDIT TRAIL</span>
+      </div>
+    </section>
+
+    <section id="operating-system" class="section section-shell operating-system" aria-labelledby="system-title">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">01 · OPERATING SYSTEM</p>
+        <h2 id="system-title">To nie chatbot. To <em>warstwa operacyjna</em> nad codzienną pracą.</h2>
+        <p>System rozdziela sygnały, decyzje i wykonanie. Dzięki temu prosta odpowiedź nie miesza się z zadaniem technicznym, a żaden zapis do eMU ani wysyłka wiadomości nie dzieje się „przy okazji”.</p>
+      </div>
+
+      <div class="system-map" data-reveal>
+        <div class="map-column map-sources">
+          <p class="map-label">SYGNAŁY</p>
+          <div class="map-node node-cyan"><span>📧</span><div><strong>Poczta firmowa</strong><small>IMAP · Sent · załączniki</small></div></div>
+          <div class="map-node node-cyan"><span>📋</span><div><strong>Portal eMU</strong><small>zadania · wydarzenia · komentarze</small></div></div>
+          <div class="map-node node-cyan"><span>🗃</span><div><strong>ERP / SQL / vault</strong><small>schemat · przykłady · dokumentacja</small></div></div>
+        </div>
+        <div class="map-flow" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="map-column map-core">
+          <p class="map-label">ROZUMOWANIE I STAN</p>
+          <div class="map-node node-green map-node-large"><span class="node-pulse"></span><div><small>PROFILE: DEFAULT</small><strong>Hermes Orchestrator</strong><p>Klasyfikuje, uzupełnia kontekst, wybiera ścieżkę i pilnuje safety gates.</p></div></div>
+          <div class="map-stores">
+            <span>proposals.db</span><span>pending_drafts.json</span><span>knowledge.db</span><span>kanban.db</span>
+          </div>
+        </div>
+        <div class="map-flow" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="map-column map-decisions">
+          <p class="map-label">DECYZJE I WYKONANIE</p>
+          <div class="map-node node-orange"><span>▣</span><div><strong>Telegram Mini Apps</strong><small>podgląd · akcje · callback</small></div></div>
+          <div class="map-node node-violet"><span>⚙</span><div><strong>tech-worker</strong><small>Kanban · workspace · REPORT.md</small></div></div>
+          <div class="map-node node-rose"><span>✓</span><div><strong>Kontrolowane akcje</strong><small>SMTP · eMU dopiero po zgodzie</small></div></div>
+        </div>
+      </div>
+
+      <div class="principle-grid">
+        <article data-reveal><span>01</span><h3>Każde źródło ma własny scanner</h3><p>E-mail, zadanie eMU i komentarz trafiają do systemu inną ścieżką, ale kończą w kanonicznym stanie.</p></article>
+        <article data-reveal><span>02</span><h3>Propozycja nie jest wykonaniem</h3><p>System może sam przygotować draft, plan zadania lub analizę. Decyzja o wysyłce i zapisie nadal należy do człowieka.</p></article>
+        <article data-reveal><span>03</span><h3>Specjalista pracuje w izolacji</h3><p>tech-worker otrzymuje pełny kontekst i trwały workspace, ale nie ma prawa zmieniać produkcji ani kontaktować się z klientem.</p></article>
+        <article data-reveal><span>04</span><h3>Raport przechodzi review</h3><p>Orkiestrator nie przekazuje surowego dumpu. Weryfikuje artefakty, testy, ryzyka i dopiero tworzy krótką decyzję operacyjną.</p></article>
+      </div>
+    </section>
+
+    <section id="workflows" class="section section-shell workflows" aria-labelledby="workflows-title">
+      <div class="section-heading section-heading-split" data-reveal>
+        <div>
+          <p class="eyebrow">02 · WORKFLOW EXPLORER</p>
+          <h2 id="workflows-title">Jeden sygnał. <em>Sześć kontrolowanych ścieżek.</em></h2>
+        </div>
+        <p>Wybierz workflow, aby zobaczyć realne crony, stan, punkty decyzji i efekt końcowy.</p>
+      </div>
+
+      <div class="workflow-shell" data-reveal>
+        <div class="workflow-tabs" role="tablist" aria-label="Wybór workflowu">
+          <button id="tab-email" role="tab" aria-selected="true" aria-controls="panel-email" tabindex="0" data-workflow-tab="email"><span>01</span> Draft odpowiedzi</button>
+          <button id="tab-proposal" role="tab" aria-selected="false" aria-controls="panel-proposal" tabindex="-1" data-workflow-tab="proposal"><span>02</span> Draft zadania</button>
+          <button id="tab-worker" role="tab" aria-selected="false" aria-controls="panel-worker" tabindex="-1" data-workflow-tab="worker"><span>03</span> tech-worker</button>
+          <button id="tab-emu" role="tab" aria-selected="false" aria-controls="panel-emu" tabindex="-1" data-workflow-tab="emu"><span>04</span> eMU i komentarze</button>
+          <button id="tab-kb" role="tab" aria-selected="false" aria-controls="panel-kb" tabindex="-1" data-workflow-tab="kb"><span>05</span> Baza wiedzy</button>
+          <button id="tab-briefing" role="tab" aria-selected="false" aria-controls="panel-briefing" tabindex="-1" data-workflow-tab="briefing"><span>06</span> Briefingi</button>
+        </div>
+
+        <div class="workflow-panels">
+          <div id="panel-email" class="workflow-panel" role="tabpanel" aria-labelledby="tab-email" data-workflow-panel="email">
+            <header class="workflow-panel-head"><div><span class="workflow-kicker">EMAIL → ODPOWIEDŹ</span><h3>Draft odpowiedzi z pełnym kontekstem wątku</h3></div><span class="workflow-schedule">co 60 min · pn–pt</span></header>
+            <div class="workflow-steps">
+              <div><span>01</span><h4>INBOX + Sent</h4><p>Himalaya pobiera nowe wiadomości i sprawdza, czy odpowiedź już wyszła.</p><small>email-draft-generator · 08:10–15:10</small></div>
+              <div><span>02</span><h4>Kontekst</h4><p>Wątek przychodzący, Sent, eMU, dostępność, vault i załączniki są łączone w jeden case.</p><small>strict fetch · attachment intelligence</small></div>
+              <div><span>03</span><h4>Draft</h4><p>LLM przygotowuje krótką odpowiedź, a stan trafia do <code>pending_drafts.json</code>.</p><small>pending · sent · rejected · expired</small></div>
+              <div class="step-decision"><span>04</span><h4>Mini App</h4><p>Widzę mail, kontekst, treść draftu i załączniki. Wybieram „Wyślij” albo „Pomiń”.</p><small>human approval</small></div>
+              <div><span>05</span><h4>SMTP Reply-All</h4><p>Po zgodzie system buduje HTML, podpis, CC, In-Reply-To i References.</p><small>draft_cmd.py · formataddr()</small></div>
+            </div>
+            <footer class="workflow-output"><span>EFEKT</span><strong>Spójna odpowiedź w tym samym wątku — bez automatycznej wysyłki.</strong></footer>
+          </div>
+
+          <div id="panel-proposal" class="workflow-panel" role="tabpanel" aria-labelledby="tab-proposal" data-workflow-panel="proposal" hidden>
+            <header class="workflow-panel-head"><div><span class="workflow-kicker">EMAIL / eMU → DECISION HUB</span><h3>Draft zadania, wydarzenia lub przekazania do specjalisty</h3></div><span class="workflow-schedule">co 15 min · pn–pt</span></header>
+            <div class="workflow-steps">
+              <div><span>01</span><h4>Scanner</h4><p>E-mail lub przypisane zadanie eMU jest klasyfikowane jako propozycja, manual review albo skip.</p><small>email-to-task :03 · eMU task :01</small></div>
+              <div><span>02</span><h4>Canonical proposal</h4><p>Źródło, klient, komentarze, załączniki i confidence trafiają do SQLite.</p><small>proposals.db · FTS5 · lifecycle</small></div>
+              <div><span>03</span><h4>Mini App</h4><p>Karta pokazuje, co system proponuje i co dokładnie otrzyma tech-worker.</p><small>proposal-notifier · :05/:20/:35/:50</small></div>
+              <div class="step-decision"><span>04</span><h4>Moja decyzja</h4><p>Draft odpowiedzi, wydarzenie, zadanie, tech-worker, pomiń albo odrzuć.</p><small>proposal-first · dry-run first</small></div>
+              <div><span>05</span><h4>Kontrolowany routing</h4><p>Wybrana akcja trafia do właściwego handlera; zapis w eMU wymaga odrębnej zgody.</p><small>proposal_cmd.py · /callback</small></div>
+            </div>
+            <footer class="workflow-output"><span>EFEKT</span><strong>Jedno centrum decyzji zamiast kilku niespójnych automatów.</strong></footer>
+          </div>
+
+          <div id="panel-worker" class="workflow-panel" role="tabpanel" aria-labelledby="tab-worker" data-workflow-panel="worker" hidden>
+            <header class="workflow-panel-head"><div><span class="workflow-kicker">PROPOSAL → KANBAN → REVIEW</span><h3>Draft zadania dla tech-workera z trwałym workspace</h3></div><span class="workflow-schedule">router :07 · review :12</span></header>
+            <div class="workflow-steps">
+              <div><span>01</span><h4>Filtr techniczny</h4><p>Router wybiera tylko SQL, Optima, BI, integracje, wydruki i obiekty bazodanowe.</p><small>strong + contextual weak signals</small></div>
+              <div><span>02</span><h4>Pełny task body</h4><p>Źródło, komentarze, załączniki, zadania powiązane, zasady i format raportu.</p><small>idempotency key · max runtime 90m</small></div>
+              <div><span>03</span><h4>tech-worker</h4><p>Pracuje w izolowanym workspace, ładuje skille ERP/SQL i testuje na bazach testowych.</p><small>default → tech-worker</small></div>
+              <div><span>04</span><h4>REPORT.md</h4><p>Summary, findings, rekomendacja, artefakty, weryfikacja, ryzyka i learning.</p><small>durable artifact contract</small></div>
+              <div class="step-decision"><span>05</span><h4>Review orkiestratora</h4><p>Weryfikacja raportu i plików; klasyfikacja: gotowe, analiza albo blokada.</p><small>bez raw dumpów</small></div>
+            </div>
+            <footer class="workflow-output"><span>EFEKT</span><strong>Zweryfikowany raport z artefaktami trafia do mojego handoffu e-mail.</strong></footer>
+          </div>
+
+          <div id="panel-emu" class="workflow-panel" role="tabpanel" aria-labelledby="tab-emu" data-workflow-panel="emu" hidden>
+            <header class="workflow-panel-head"><div><span class="workflow-kicker">eMU → ALERT → AKCJA</span><h3>Monitoring wydarzeń, zadań i komentarzy</h3></div><span class="workflow-schedule">od 06:45 do 20:00</span></header>
+            <div class="workflow-steps">
+              <div><span>01</span><h4>Synchronizacja</h4><p>Poranny i wieczorny sync buduje stan lokalny i wykrywa zmiany.</p><small>eMU Events Morning Sync · Incremental Sync</small></div>
+              <div><span>02</span><h4>Zmiana</h4><p>Nowy komentarz, anulowanie, przypomnienie lub zmiana w ciągu dnia staje się sygnałem.</p><small>comment scan co 15 min</small></div>
+              <div><span>03</span><h4>Enrichment</h4><p>Karta zawiera klienta, komentarz, ryzyka, powiązania i link bezpośredni do eMU.</p><small>context + decision signals</small></div>
+              <div class="step-decision"><span>04</span><h4>Mini App</h4><p>Załatwione, jutro, nie dotyczy lub przygotuj odpowiedź.</p><small>fetch /callback · action whitelist</small></div>
+              <div><span>05</span><h4>Audytowalny stan</h4><p>Każda decyzja aktualizuje kontrolowany state; write do eMU pozostaje osobnym krokiem.</p><small>read-only default</small></div>
+            </div>
+            <footer class="workflow-output"><span>EFEKT</span><strong>Widzę tylko sprawy wymagające reakcji, nie surowy strumień zmian.</strong></footer>
+          </div>
+
+          <div id="panel-kb" class="workflow-panel" role="tabpanel" aria-labelledby="tab-kb" data-workflow-panel="kb" hidden>
+            <header class="workflow-panel-head"><div><span class="workflow-kicker">eMU → KNOWLEDGE LAYER</span><h3>Baza wiedzy z wyszukiwaniem hybrydowym</h3></div><span class="workflow-schedule">sync 15 min · embed 3 h</span></header>
+            <div class="workflow-steps">
+              <div><span>01</span><h4>Pełny sync</h4><p>Zadania, komentarze i rozwiązania są pobierane partiami do lokalnego SQLite.</p><small>emu-kb-full-sync-batch</small></div>
+              <div><span>02</span><h4>Enrichment</h4><p>Wiadomości i załączniki są czyszczone, łączone i przygotowywane do retrieval.</p><small>emu-msg-enrich-batch · co 30 min</small></div>
+              <div><span>03</span><h4>Klasyfikacja</h4><p>LLM przypisuje kategorię, produkt, priorytet i sygnały problemu.</p><small>quality classification</small></div>
+              <div><span>04</span><h4>Embeddings + FTS5</h4><p>nomic-embed-text 768D łączy semantic search z pełnotekstowym indeksem.</p><small>hybrid ranking</small></div>
+              <div><span>05</span><h4>Kontekst dla agenta</h4><p>Wyniki wspierają drafty e-maili, propozycje zadań i analizy techniczne.</p><small>nie tylko „chat z dokumentami”</small></div>
+            </div>
+            <footer class="workflow-output"><span>EFEKT</span><strong>Wiedza z rozwiązanych spraw wraca do kolejnych decyzji.</strong></footer>
+          </div>
+
+          <div id="panel-briefing" class="workflow-panel" role="tabpanel" aria-labelledby="tab-briefing" data-workflow-panel="briefing" hidden>
+            <header class="workflow-panel-head"><div><span class="workflow-kicker">STATE → DAILY OPERATIONS</span><h3>Briefingi, raporty i watchdogi zamiast szumu</h3></div><span class="workflow-schedule">00:00–21:30</span></header>
+            <div class="workflow-steps">
+              <div><span>01</span><h4>Health checks</h4><p>W nocy i nad ranem sprawdzane są bazy, FTS5, proposal store i pipeline.</p><small>00:00 · 06:00 · 06:30 · 06:35</small></div>
+              <div><span>02</span><h4>Poranny briefing</h4><p>Plan dnia, wydarzenia, otwarte maile, zadania i propozycje w jednej Mini App.</p><small>07:00 · Telegram</small></div>
+              <div><span>03</span><h4>Sygnały w ciągu dnia</h4><p>Tylko anulowania, zmiany i watchdogi wymagające reakcji.</p><small>[SILENT] gdy brak akcji</small></div>
+              <div><span>04</span><h4>Wieczór i tydzień</h4><p>Przypomnienia, raport piątkowy i niedzielne planowanie.</p><small>17:00 · pt 15:00 · nd 18:00</small></div>
+              <div><span>05</span><h4>Backup i learning</h4><p>Codzienny backup danych, Hindsight oraz weekendowe utrzymanie skilli.</p><small>3:20 · 4:45 · weekend 2:00</small></div>
+            </div>
+            <footer class="workflow-output"><span>EFEKT</span><strong>System raportuje wyjątki, a nie fakt, że „nic się nie wydarzyło”.</strong></footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mini-apps" class="section section-shell mini-apps" aria-labelledby="mini-apps-title">
+      <div class="section-heading section-heading-split" data-reveal>
+        <div>
+          <p class="eyebrow">03 · TELEGRAM MINI APPS</p>
+          <h2 id="mini-apps-title">Decyzje mieszczą się <em>w jednej karcie.</em></h2>
+        </div>
+        <p>Nie wysyłam sobie surowych logów. Telegram jest mobilnym panelem operacyjnym z HTML-em, stanem i kontrolowanymi callbackami.</p>
+      </div>
+
+      <div class="mini-app-stage">
+        <article class="device-card device-card-email" data-mini-app="email-draft" data-reveal>
+          <h3 class="sr-only">Mini App: draft odpowiedzi</h3>
+          <div class="device-label"><span>01</span><div><strong>Draft odpowiedzi</strong><small>email-draft-generator</small></div></div>
+          <div class="device-frame">
+            <div class="device-notch"></div>
+            <div class="device-screen" aria-hidden="true">
+              <div class="tg-header"><span>‹</span><strong>Draft e-mail</strong><span>•••</span></div>
+              <div class="app-banner app-banner-green"><small>GOTOWY DO DECYZJI</small><strong>Problem techniczny · Optima</strong></div>
+              <div class="app-card">
+                <div class="app-meta"><span>📧 E-mail klienta</span><b>WYSOKI</b></div>
+                <h4>Nie działa eksport dokumentu</h4>
+                <p>Wątek przeanalizowany razem z poprzednią odpowiedzią i załączonym screenshotem.</p>
+              </div>
+              <div class="app-card app-draft"><small>PROPONOWANA ODPOWIEDŹ</small><p>Dzień dobry, sprawdziłem opis błędu. Proszę w pierwszej kolejności…</p><span>Reply-All · podpis HTML · threading</span></div>
+              <div class="app-buttons"><span class="app-btn-primary">✓ Wyślij</span><span>Pomiń</span></div>
+              <p class="app-safety">Nic nie zostanie wysłane bez potwierdzenia.</p>
+            </div>
+          </div>
+          <p class="device-caption">Podgląd treści, kontekstu i załączników. Akceptacja uruchamia bezpośrednio kontrolowany handler SMTP.</p>
+        </article>
+
+        <article class="device-card device-card-proposal" data-mini-app="task-proposal" data-reveal>
+          <h3 class="sr-only">Mini App: Decision Hub</h3>
+          <div class="device-label"><span>02</span><div><strong>Decision Hub</strong><small>proposal-notifier</small></div></div>
+          <div class="device-frame">
+            <div class="device-notch"></div>
+            <div class="device-screen" aria-hidden="true">
+              <div class="tg-header"><span>‹</span><strong>Nowa propozycja</strong><span>•••</span></div>
+              <div class="app-banner app-banner-blue"><small>ANALIZA TECHNICZNA</small><strong>Źródło: zadanie eMU</strong></div>
+              <div class="app-card">
+                <div class="app-meta"><span>📋 eMU Zadanie</span><b>87%</b></div>
+                <h4>Rozbudowa widoku SQL dla raportu</h4>
+                <div class="app-tags"><span>sql</span><span>optima</span><span>bi</span></div>
+              </div>
+              <div class="app-card app-worker-preview"><small>PROPONOWANE ZADANIE KANBAN</small><ol><li>sprawdź schemat</li><li>przeanalizuj SQL</li><li>przygotuj REPORT.md</li></ol><span>workspace: routed/…</span></div>
+              <div class="app-buttons app-buttons-grid"><span class="app-btn-primary">Do tech-worker</span><span>Draft</span><span>Pomiń</span><span>Odrzuć</span></div>
+            </div>
+          </div>
+          <p class="device-caption">Przed decyzją widzę plan pracy, skille, workspace i granice bezpieczeństwa specjalisty.</p>
+        </article>
+
+        <article class="device-card device-card-emu" data-mini-app="emu-notification" data-reveal>
+          <h3 class="sr-only">Mini App: alert eMU</h3>
+          <div class="device-label"><span>03</span><div><strong>Alert eMU</strong><small>comment scan + reminder</small></div></div>
+          <div class="device-frame">
+            <div class="device-notch"></div>
+            <div class="device-screen" aria-hidden="true">
+              <div class="tg-header"><span>‹</span><strong>Powiadomienie eMU</strong><span>•••</span></div>
+              <div class="app-banner app-banner-amber"><small>NOWY KOMENTARZ</small><strong>Zadanie serwisowe</strong></div>
+              <div class="app-card">
+                <div class="app-meta"><span>📋 ZADANIE</span><b>HIGH</b></div>
+                <h4>Weryfikacja rozwiązania</h4>
+                <span class="app-faux-link">Otwórz w eMU ↗</span>
+              </div>
+              <div class="app-card app-comment"><small>KOMENTARZ</small><p>„Proszę o potwierdzenie, czy zmiana może wejść na środowisko testowe.”</p></div>
+              <div class="app-card app-risk"><small>SYGNAŁY</small><span>oczekuje reakcji</span><span>powiązane zadanie</span></div>
+              <div class="app-buttons app-buttons-grid"><span class="app-btn-primary">Załatwione</span><span>Jutro</span><span>Nie dotyczy</span><span>Odpowiedz</span></div>
+            </div>
+          </div>
+          <p class="device-caption">Komentarz, ryzyka, powiązania i cztery czytelne akcje bez otwierania całego portalu.</p>
+        </article>
+      </div>
+
+      <div class="artifact-architecture" data-reveal>
+        <div><small>01 · GENERATE</small><strong>JSON → responsywny HTML</strong><p>Osobne generatory dla draftów, propozycji, eMU, briefingów i raportów.</p></div>
+        <span aria-hidden="true">→</span>
+        <div><small>02 · REGISTER</small><strong>Prywatny Artifact Server</strong><p>Rejestracja, media, healthcheck i kontrolowana retencja artefaktów.</p></div>
+        <span aria-hidden="true">→</span>
+        <div><small>03 · DELIVER</small><strong>Tailscale Serve → Telegram</strong><p>HTTPS otwierany jako Web App bez wystawiania głównego WebUI.</p></div>
+        <span aria-hidden="true">→</span>
+        <div><small>04 · CALLBACK</small><strong>fetch('/callback')</strong><p>Whitelistowane komendy, potwierdzenie, status i kontrolowany handler.</p></div>
+      </div>
+    </section>
+
+    <section id="tech-worker" class="section section-shell tech-worker" aria-labelledby="tech-worker-title">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">04 · MULTI-AGENT HANDOFF</p>
+        <h2 id="tech-worker-title">Specjalista dostaje <em>zadanie, nie luźny prompt.</em></h2>
+        <p>Najbardziej złożone sprawy SQL/ERP nie są rozwiązywane w głównym czacie. Orkiestrator przygotowuje audytowalny kontrakt pracy dla profilu <code>tech-worker</code>.</p>
+      </div>
+
+      <div class="worker-pipeline" data-reveal>
+        <div class="worker-lane-label">DEFAULT / ORCHESTRATOR</div>
+        <article><span class="worker-step">01</span><div><small>SCANNER</small><h3>Email lub eMU</h3><p>Źródło, komentarze, załączniki, powiązania i sygnały techniczne.</p></div><b>read-only</b></article>
+        <article><span class="worker-step">02</span><div><small>PROPOSAL STORE</small><h3>Kanoniczny draft zadania</h3><p>Lifecycle, confidence, deduplikacja i idempotency key.</p></div><b>SQLite + FTS5</b></article>
+        <article class="worker-gate"><span class="worker-step">03</span><div><small>HUMAN GATE</small><h3>Wyślij do tech-worker?</h3><p>Mini App pokazuje plan pracy zanim powstanie karta Kanban.</p></div><b>moja decyzja</b></article>
+        <article><span class="worker-step">04</span><div><small>ROUTER</small><h3>Kanban + trwały workspace</h3><p>6 skilli, pełny task body, 90 min runtime i zero produkcyjnych write’ów.</p></div><b>:07 co 15 min</b></article>
+
+        <div class="worker-lane-break"><span>handoff</span></div>
+        <div class="worker-lane-label worker-lane-label-violet">TECH-WORKER / DEEPSEEK-V4-PRO</div>
+        <article class="worker-specialist"><span class="worker-step">05</span><div><small>SPECIALIST EXECUTION</small><h3>Analiza, test i artefakty</h3><p>Weryfikacja schematu, testowe bazy, poprawiony SQL/konfiguracja i dowody wykonania.</p></div><b>isolated</b></article>
+        <article class="worker-specialist"><span class="worker-step">06</span><div><small>DELIVERABLE</small><h3>REPORT.md</h3><p>Summary · Findings · Action · Artifacts · Verification · Risks · Learning.</p></div><b>durable</b></article>
+
+        <div class="worker-lane-break"><span>review</span></div>
+        <div class="worker-lane-label">DEFAULT / ORCHESTRATOR</div>
+        <article><span class="worker-step">07</span><div><small>QUALITY GATE</small><h3>Kontrola raportu i plików</h3><p>Brak sekcji lub artefaktu oznacza blokadę, nie sukces.</p></div><b>:12 co 15 min</b></article>
+        <article class="worker-gate"><span class="worker-step">08</span><div><small>OPERATIONAL HANDOFF</small><h3>Gotowe / analiza / decyzja</h3><p>Zwięzły raport z załącznikami trafia do mojego e-maila; watchdog pilnuje pipeline’u.</p></div><b>bez raw dumpu</b></article>
+      </div>
+
+      <div class="worker-contract-grid">
+        <article data-reveal><span>INPUT</span><h3>Pełny kontekst</h3><ul><li>źródło i link</li><li>komentarze z eMU</li><li>załączniki lokalne</li><li>zadania powiązane</li></ul></article>
+        <article data-reveal><span>BOUNDARIES</span><h3>Twarde zakazy</h3><ul><li>bez write do eMU</li><li>bez zmian produkcyjnych</li><li>bez wiadomości do klienta</li><li>DDL/DML tylko test + rollback</li></ul></article>
+        <article data-reveal><span>OUTPUT</span><h3>Sprawdzalny rezultat</h3><ul><li>REPORT.md</li><li>SQL / config / dane testowe</li><li>wynik weryfikacji</li><li>ryzyka i blocker</li></ul></article>
+        <article data-reveal><span>LEARNING</span><h3>System się doskonali</h3><ul><li>skill_update</li><li>trwały fakt środowiska</li><li>albo jawne learning: none</li><li>bez zapisywania śmieci do pamięci</li></ul></article>
+      </div>
+    </section>
+
+    <section id="cron-control" class="section section-shell cron-control" aria-labelledby="cron-title">
+      <div class="section-heading section-heading-split" data-reveal>
+        <div>
+          <p class="eyebrow">05 · AUTOMATION CONTROL PLANE</p>
+          <h2 id="cron-title"><em>43 aktywne automatyzacje</em> układają rytm dnia.</h2>
+        </div>
+        <p>Cron nie jest jednym timerem. To warstwa synchronizacji, decyzji, monitoringu, backupu i cichego utrzymania.</p>
+      </div>
+
+      <div class="day-timeline" data-reveal role="img" aria-label="Przykładowy rytm dnia roboczego">
+        <div class="timeline-axis"><span>00</span><span>04</span><span>07</span><span>08</span><span>12</span><span>17</span><span>20</span><span>24</span></div>
+        <div class="timeline-track">
+          <i class="timeline-now" aria-hidden="true"></i>
+          <span style="--start:0%;--width:17%" class="timeline-block block-infra">health + backup</span>
+          <span style="--start:25%;--width:9%" class="timeline-block block-briefing">briefing</span>
+          <span style="--start:33%;--width:38%" class="timeline-block block-email">email + proposals</span>
+          <span style="--start:34%;--width:43%" class="timeline-block block-emu">eMU monitoring</span>
+          <span style="--start:36%;--width:42%" class="timeline-block block-tech">tech-worker loop</span>
+          <span style="--start:79%;--width:10%" class="timeline-block block-kb">deep analysis</span>
+        </div>
+      </div>
+
+      <div class="cron-explorer" data-reveal>
+        <div class="cron-toolbar">
+          <div class="cron-filters" role="group" aria-label="Filtry kategorii cron">
+            <button type="button" class="is-active" data-cron-filter="all" aria-pressed="true">Wszystkie <span>43</span></button>
+            <button type="button" data-cron-filter="email" aria-pressed="false">Email <span>5</span></button>
+            <button type="button" data-cron-filter="emu" aria-pressed="false">eMU <span>13</span></button>
+            <button type="button" data-cron-filter="tech" aria-pressed="false">Tech-worker <span>4</span></button>
+            <button type="button" data-cron-filter="knowledge" aria-pressed="false">Wiedza <span>7</span></button>
+            <button type="button" data-cron-filter="briefing" aria-pressed="false">Briefingi <span>5</span></button>
+            <button type="button" data-cron-filter="infra" aria-pressed="false">Infra <span>9</span></button>
+          </div>
+          <label class="cron-search"><span class="sr-only">Szukaj automatyzacji</span><input type="search" placeholder="Szukaj automatyzacji…" data-cron-search><kbd>/</kbd></label>
+        </div>
+        <div class="cron-summary" aria-live="polite"><strong data-cron-count>43</strong><span>pasujące automatyzacje</span><small><i></i> wszystkie aktywne</small></div>
+        <div class="cron-list" data-cron-list></div>
+        <noscript><p class="noscript-note">Włącz JavaScript, aby filtrować listę 43 automatyzacji. Pełny wykaz znajduje się w <a href="docs/cron-orchestration.md">dokumentacji cronów</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section id="knowledge" class="section section-shell knowledge" aria-labelledby="knowledge-title">
+      <div class="knowledge-layout">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">06 · KNOWLEDGE & MEMORY</p>
+          <h2 id="knowledge-title">Każda rozwiązana sprawa może <em>pomóc przy następnej.</em></h2>
+          <p>Baza wiedzy eMU jest oddzielona od pamięci agenta. Fakty, treść zgłoszeń, embeddings i historia synchronizacji mają własny stan i backup.</p>
+          <div class="knowledge-stats">
+            <div><strong>15 min</strong><span>pełny sync</span></div>
+            <div><strong>30 min</strong><span>enrichment</span></div>
+            <div><strong>180 min</strong><span>embeddings</span></div>
+            <div><strong>768D</strong><span>nomic vectors</span></div>
+          </div>
+        </div>
+        <div class="knowledge-visual" data-reveal role="group" aria-label="Schemat wyszukiwania w bazie wiedzy">
+          <div class="knowledge-query"><span>?</span><p>„Czy podobny błąd był już rozwiązany?”</p></div>
+          <div class="knowledge-engine">
+            <span class="engine-ring ring-one"></span><span class="engine-ring ring-two"></span><span class="engine-ring ring-three"></span>
+            <div><small>HYBRID RETRIEVAL</small><strong>FTS5 + vector</strong><p>SQLite · nomic-embed-text</p></div>
+          </div>
+          <div class="knowledge-results">
+            <div><span>0.91</span><div><strong>Podobne zgłoszenie</strong><small>rozwiązanie + źródło</small></div></div>
+            <div><span>0.84</span><div><strong>Dokumentacja ERP</strong><small>procedura + ograniczenia</small></div></div>
+            <div><span>0.78</span><div><strong>Historia klienta</strong><small>kontekst wcześniejszej sprawy</small></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="section section-shell safety" aria-labelledby="safety-title">
+      <div class="section-heading section-heading-split" data-reveal>
+        <div>
+          <p class="eyebrow">07 · Human-in-the-loop</p>
+          <h2 id="safety-title">Automatyzacja kończy się tam, gdzie zaczyna się <em>odpowiedzialność.</em></h2>
+        </div>
+        <p>Najważniejsze decyzje są jawne, odwracalne lub blokowane do czasu potwierdzenia.</p>
+      </div>
+      <div class="safety-grid">
+        <article data-reveal><span>01</span><div class="safety-icon">↗</div><h3>Wysyłka e-maila</h3><p>Draft może powstać automatycznie. SMTP uruchamia dopiero moje „Wyślij”.</p><small>approval required</small></article>
+        <article data-reveal><span>02</span><div class="safety-icon">□</div><h3>Zapis do eMU</h3><p>Domyślny tryb to read-only. Preview i dry-run nie są wykonaniem.</p><small>explicit consent</small></article>
+        <article data-reveal><span>03</span><div class="safety-icon">⌁</div><h3>Produkcja SQL</h3><p>Analiza i testy trafiają na bazy testowe; schemat jest weryfikowany przed kodem.</p><small>test DB + rollback</small></article>
+        <article data-reveal><span>04</span><div class="safety-icon">◎</div><h3>Delegacja</h3><p>tech-worker otrzymuje whitelistę skilli, workspace i kontrakt raportu.</p><small>isolated specialist</small></article>
+        <article data-reveal><span>05</span><div class="safety-icon">✓</div><h3>Akceptacja wyniku</h3><p>Status „done” nie wystarcza. Orkiestrator sprawdza raport, pliki i dowody.</p><small>independent review</small></article>
+      </div>
+    </section>
+
+    <section class="section section-shell stack" aria-labelledby="stack-title">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">08 · TECHNOLOGY STACK</p>
+        <h2 id="stack-title">Lekki rdzeń. <em>Duża zdolność integracji.</em></h2>
+      </div>
+      <div class="stack-grid" data-reveal>
+        <div><small>AGENT RUNTIME</small><strong>Hermes Agent</strong><span>Python · skills · memory · profiles</span></div>
+        <div><small>USER INTERFACE</small><strong>Telegram</strong><span>Gateway · Mini Apps · callbacks</span></div>
+        <div><small>EMAIL</small><strong>himalaya</strong><span>IMAP · SMTP · Reply-All</span></div>
+        <div><small>ERP PORTAL</small><strong>eMU</strong><span>Playwright · REST · Select2</span></div>
+        <div><small>KNOWLEDGE</small><strong>SQLite + FTS5</strong><span>nomic-embed-text · 768D</span></div>
+        <div><small>ERP DATA</small><strong>Microsoft SQL Server</strong><span>Comarch ERP Optima · sqlcmd</span></div>
+        <div><small>ORCHESTRATION</small><strong>Kanban + Cron</strong><span>43 jobs · durable workspaces</span></div>
+        <div><small>HOST</small><strong>WSL2 + Windows</strong><span>systemd · Tailscale · Windows MCP</span></div>
+      </div>
+    </section>
+
+    <section id="incidents" class="section section-shell incidents" aria-labelledby="incidents-title">
+      <p class="eyebrow" data-reveal><span class="status-dot status-dot-amber"></span> 06 · WHAT BROKE & HOW WE FIXED</p>
+      <h2 id="incidents-title" data-reveal>System ma pamięć błędów,<br>nie tylko osiągnięć.</h2>
+      <p class="section-lead" data-reveal>Każda awaria produkcyjna miała root cause, naprawę i zabezpieczenie. To nie jest dekoracja — te incydenty napisały reguły, które widać w safety gates.</p>
+      <div class="incident-grid">
+        <article class="incident-card" data-reveal>
+          <span class="incident-index">01</span>
+          <h3>Checkpoint gubił maile</h3>
+          <dl>
+            <div><dt>OBJAW</dt><dd>Po przerwaniu skanu następny przebieg pomijał wiadomości — stan był zapisywany przed zakończeniem analizy.</dd></div>
+            <div><dt>ROOT CAUSE</dt><dd>Checkpoint commitowany przed sukcesem pełnego skanu, bez modelu rozpoczęcia/zakończenia.</dd></div>
+            <div><dt>FIX</dt><dd>Zapis stanu dopiero po udanym przebiegu; cykl życia z jawnym krokiem zatwierdzenia.</dd></div>
+            <div><dt>PREVENTION</dt><dd>Codzienny feedback porównuje zaakceptowane drafty z wiadomościami faktycznie widocznymi w Sent.</dd></div>
+          </dl>
+        </article>
+        <article class="incident-card" data-reveal>
+          <span class="incident-index">02</span>
+          <h3>Router routował „biuletyn" jak BI</h3>
+          <dl>
+            <div><dt>OBJAW</dt><dd>Sprawy bez sygnału technicznego trafiały do tech-workera przez zbyt szeroką klasyfikację.</dd></div>
+            <div><dt>ROOT CAUSE</dt><dd>Regex <code>\bbi\b</code> łapał słowa takie jak „biuletyn" i „bilet"; brak limitu routingu na tick.</dd></div>
+            <div><dt>FIX</dt><dd>Ściślejsze wzorce, limity stawek i jawne kategorie zamiast pojedynczych tokenów.</dd></div>
+            <div><dt>PREVENTION</dt><dd>Przegląd fałszywych trafień jako stały element utrzymania klasyfikatora.</dd></div>
+          </dl>
+        </article>
+        <article class="incident-card" data-reveal>
+          <span class="incident-index">03</span>
+          <h3>Rozjazd performer_group w bazie wiedzy</h3>
+          <dl>
+            <div><dt>OBJAW</dt><dd>Raporty bazy wiedzy pokazywały błędne grupy wykonawcze dla części rekordów.</dd></div>
+            <div><dt>ROOT CAUSE</dt><dd>API i sync zwracały różne wartości tego samego pola; brak kanonicznego mapowania.</dd></div>
+            <div><dt>FIX</dt><dd>Obsługa rozbieżności w skillach i jedno źródło mapowania po stronie zapisu.</dd></div>
+            <div><dt>PREVENTION</dt><dd>Diagnostyka dual-read porównuje odczyt API z lokalnym stanem.</dd></div>
+          </dl>
+        </article>
+        <article class="incident-card" data-reveal>
+          <span class="incident-index">04</span>
+          <h3>Embeddingi nie nadążały za sync</h3>
+          <dl>
+            <div><dt>OBJAW</dt><dd>Świeże rekordy wypadały z wyszukiwania semantycznego — pokrycie wektorów spadło do ok. 60%.</dd></div>
+            <div><dt>ROOT CAUSE</dt><dd>Sync co 15 minut, embedding co 3 godziny — kolejka rosła szybciej niż generator wektorów.</dd></div>
+            <div><dt>FIX</dt><dd>Wyrównanie rytmu przetwarzania i raport postępu z widocznymi regresami.</dd></div>
+            <div><dt>PREVENTION</dt><dd>Tygodniowy raport jakości knowledge layer zamiast milczącej degradacji.</dd></div>
+          </dl>
+        </article>
+      </div>
+      <p class="incident-note" data-reveal>Wspólny wzorzec: każdy incydent kończył się mechanizmem, który uczynił powtórkę widoczną lub niemożliwą — zanim dotarła do klienta.</p>
+    </section>
+
+    <section id="about" class="section section-shell about" aria-labelledby="about-title">
+      <div class="about-card" data-reveal>
+        <div class="about-monogram" aria-hidden="true"><span>AK</span><i></i></div>
+        <div class="about-copy">
+          <p class="eyebrow">O AUTORZE</p>
+          <h2 id="about-title">Artur Kozłowski</h2>
+          <p class="about-role">Konsultant ERP · projektant workflowów AI · praktyk automatyzacji</p>
+          <p>Łączę wiedzę wdrożeniową Comarch ERP Optima i eMU z agentami AI, bazami danych oraz automatyzacją operacyjną. Buduję rozwiązania, które mają stan, audyt, granice bezpieczeństwa i realny punkt odbioru — nie tylko efektowny prompt.</p>
+          <div class="about-links">
+            <a class="button button-primary" href="https://github.com/arturkozlowski1988" target="_blank" rel="noopener noreferrer">Mój GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes Agent <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="about-index">
+          <p>CASE STUDY INDEX</p>
+          <a href="docs/architecture.md"><span>01</span> Architektura</a>
+          <a href="docs/email-pipeline.md"><span>02</span> Pipeline e-mail</a>
+          <a href="docs/full-operational-workflow.md"><span>03</span> Pełny workflow</a>
+          <a href="docs/cron-orchestration.md"><span>04</span> Cron control plane</a>
+          <a href="docs/knowledge-base.md"><span>05</span> Knowledge base</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>Artur Kozłowski</strong><span>AI operations × ERP · 2026</span></div>
+    <p>Publiczne case study pokazuje architekturę i workflow. Dane klientów, treści zgłoszeń, dane dostępowe i prywatna baza wiedzy nie są publikowane.</p>
+    <a href="#hero">Do góry <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <dialog id="english-summary" lang="en" aria-labelledby="english-title">
+    <div class="dialog-head"><p>ENGLISH SUMMARY</p><button type="button" data-close-english aria-label="Close English summary">×</button></div>
+    <div class="dialog-body">
+      <p class="eyebrow">CASE STUDY · AI OPERATIONS FOR ERP</p>
+      <h2 id="english-title">A controlled operating system built on Hermes Agent.</h2>
+      <p>I designed and implemented a multi-layer operational workflow connecting business email, the eMU service portal, Telegram Mini Apps, a hybrid knowledge base and a dedicated technical worker.</p>
+      <ul>
+        <li><strong>Email reply drafts:</strong> thread context, Sent-folder checks, attachment analysis, knowledge retrieval, mobile approval and standards-compliant Reply-All delivery.</li>
+        <li><strong>Decision Hub:</strong> email and eMU signals become canonical proposals for a reply draft, task, event or technical handoff.</li>
+        <li><strong>Technical worker:</strong> isolated Kanban task, durable workspace, ERP/SQL skills, test evidence, REPORT.md and independent orchestrator review.</li>
+        <li><strong>Operations:</strong> 43 active scheduled jobs for sync, monitoring, briefings, backups, knowledge enrichment and health checks.</li>
+        <li><strong>Safety:</strong> read-only by default, proposal-first execution, explicit human approval and verified artifacts.</li>
+      </ul>
+      <p class="dialog-note">Stack: Hermes Agent · WSL2 · Telegram · himalaya · Playwright · SQLite/FTS5 · nomic-embed-text · MSSQL · Kanban · Tailscale.</p>
+      <a class="button button-primary" href="https://github.com/arturkozlowski1988/hermes-erp-portfolio" target="_blank" rel="noopener noreferrer">View the repository <span aria-hidden="true">↗</span></a>
+    </div>
+  </dialog>
+</body>
+</html>

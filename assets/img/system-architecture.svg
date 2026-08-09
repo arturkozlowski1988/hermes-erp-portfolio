@@ -1,0 +1,199 @@
+<svg width="1400" height="920" viewBox="0 0 1400 920" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Architektura operacyjna Hermes Agent dla ERP</title>
+  <desc id="desc">Przepływ od poczty i portalu eMU przez orkiestrator, bazę propozycji i Telegram Mini Apps do tech-workera, raportu oraz kontrolowanych akcji.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#BFE6CE" stroke-opacity=".045"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0L8 4L0 8V0Z" fill="#91F2BC"/>
+    </marker>
+    <marker id="arrowMuted" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0L8 4L0 8V0Z" fill="#63796D"/>
+    </marker>
+    <style>
+      .label{font:600 11px 'IBM Plex Mono',monospace;letter-spacing:1.5px;fill:#91F2BC}
+      .caption{font:500 10px 'IBM Plex Mono',monospace;letter-spacing:1.2px;fill:#7F9489}
+      .title{font:700 22px Manrope,Arial,sans-serif;fill:#EAF3EC}
+      .nodeTitle{font:700 16px Manrope,Arial,sans-serif;fill:#EAF3EC}
+      .nodeText{font:400 12px 'DM Sans',Arial,sans-serif;fill:#93A69B}
+      .tiny{font:500 9px 'IBM Plex Mono',monospace;fill:#7F9489}
+      .pill{font:600 8px 'IBM Plex Mono',monospace;letter-spacing:.7px}
+    </style>
+  </defs>
+
+  <rect width="1400" height="920" rx="32" fill="#07110F"/>
+  <rect width="1400" height="920" rx="32" fill="url(#grid)"/>
+  <path d="M0 128H1400" stroke="#BFE6CE" stroke-opacity=".12"/>
+  <circle cx="1250" cy="90" r="190" fill="#48DD91" fill-opacity=".035"/>
+  <circle cx="102" cy="790" r="180" fill="#AD9CFF" fill-opacity=".03"/>
+
+  <g transform="translate(58 42)">
+    <rect width="40" height="40" rx="10" fill="#0E211B" stroke="#91F2BC" stroke-opacity=".35"/>
+    <path d="M12 27L20 12L28 27M15 22H25" stroke="#91F2BC" stroke-width="2" stroke-linecap="round"/>
+    <text x="56" y="14" class="caption">CASE STUDY / ARTUR KOZŁOWSKI</text>
+    <text x="56" y="37" class="title">Hermes Agent · operational architecture</text>
+  </g>
+  <g transform="translate(1132 50)">
+    <circle cx="8" cy="8" r="4" fill="#91F2BC" filter="url(#glow)"/>
+    <text x="24" y="12" class="caption" fill="#91F2BC">PRODUCTION WORKFLOW</text>
+  </g>
+
+  <!-- Sources -->
+  <text x="60" y="175" class="label">01 · SIGNALS</text>
+  <g transform="translate(60 198)">
+    <rect width="270" height="104" rx="15" fill="#0B1715" stroke="#72DBE7" stroke-opacity=".23"/>
+    <rect x="18" y="19" width="42" height="42" rx="10" fill="#72DBE7" fill-opacity=".08"/>
+    <path d="M28 32H50V48H28V32ZM28 33L39 41L50 33" stroke="#72DBE7" stroke-width="1.6" stroke-linejoin="round"/>
+    <text x="76" y="39" class="nodeTitle">Business email</text>
+    <text x="76" y="60" class="nodeText">IMAP · Sent · threads</text>
+    <text x="18" y="86" class="tiny">himalaya + attachment intelligence</text>
+  </g>
+  <g transform="translate(60 320)">
+    <rect width="270" height="104" rx="15" fill="#0B1715" stroke="#F3B86B" stroke-opacity=".23"/>
+    <rect x="18" y="19" width="42" height="42" rx="10" fill="#F3B86B" fill-opacity=".08"/>
+    <path d="M29 28H49V51H29V28ZM34 34H44M34 39H44M34 44H41" stroke="#F3B86B" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="76" y="39" class="nodeTitle">eMU portal</text>
+    <text x="76" y="60" class="nodeText">tasks · events · comments</text>
+    <text x="18" y="86" class="tiny">read-only scanners + Playwright</text>
+  </g>
+  <g transform="translate(60 442)">
+    <rect width="270" height="104" rx="15" fill="#0B1715" stroke="#AD9CFF" stroke-opacity=".23"/>
+    <rect x="18" y="19" width="42" height="42" rx="10" fill="#AD9CFF" fill-opacity=".08"/>
+    <path d="M29 31H49V48H29V31ZM33 36H45M33 41H42" stroke="#AD9CFF" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="76" y="39" class="nodeTitle">ERP / SQL / vault</text>
+    <text x="76" y="60" class="nodeText">schema · docs · examples</text>
+    <text x="18" y="86" class="tiny">Comarch ERP Optima + MSSQL</text>
+  </g>
+
+  <!-- Input arrows -->
+  <path d="M330 250H410" stroke="#63796D" stroke-width="1.4" marker-end="url(#arrowMuted)"/>
+  <path d="M330 372H385Q405 372 405 352V338" stroke="#63796D" stroke-width="1.4" marker-end="url(#arrowMuted)"/>
+  <path d="M330 494H385Q405 494 405 472V430" stroke="#63796D" stroke-width="1.4" marker-end="url(#arrowMuted)"/>
+  <circle cx="371" cy="250" r="3" fill="#91F2BC" filter="url(#glow)"/>
+
+  <!-- Core -->
+  <text x="424" y="175" class="label">02 · REASONING &amp; STATE</text>
+  <g transform="translate(410 198)">
+    <rect width="420" height="248" rx="22" fill="#0B1815" stroke="#91F2BC" stroke-opacity=".36"/>
+    <circle cx="210" cy="66" r="34" fill="#91F2BC" fill-opacity=".06" stroke="#91F2BC" stroke-opacity=".2"/>
+    <circle cx="210" cy="66" r="6" fill="#91F2BC" filter="url(#glow)"/>
+    <text x="210" y="122" text-anchor="middle" class="caption" fill="#91F2BC">PROFILE: DEFAULT</text>
+    <text x="210" y="152" text-anchor="middle" class="title">Hermes Orchestrator</text>
+    <text x="210" y="180" text-anchor="middle" class="nodeText">classify · enrich · route · enforce safety</text>
+    <g transform="translate(42 202)">
+      <rect width="94" height="26" rx="7" fill="#91F2BC" fill-opacity=".06" stroke="#91F2BC" stroke-opacity=".12"/>
+      <text x="47" y="17" text-anchor="middle" class="tiny">proposals.db</text>
+      <rect x="102" width="112" height="26" rx="7" fill="#91F2BC" fill-opacity=".06" stroke="#91F2BC" stroke-opacity=".12"/>
+      <text x="158" y="17" text-anchor="middle" class="tiny">draft state</text>
+      <rect x="222" width="114" height="26" rx="7" fill="#91F2BC" fill-opacity=".06" stroke="#91F2BC" stroke-opacity=".12"/>
+      <text x="279" y="17" text-anchor="middle" class="tiny">knowledge.db</text>
+    </g>
+  </g>
+  <g transform="translate(410 466)">
+    <rect width="200" height="80" rx="14" fill="#0B1715" stroke="#BFE6CE" stroke-opacity=".14"/>
+    <text x="18" y="28" class="caption">CANONICAL STATE</text>
+    <text x="18" y="52" class="nodeTitle">SQLite + FTS5</text>
+    <text x="18" y="68" class="tiny">lifecycle · dedup · audit</text>
+  </g>
+  <g transform="translate(630 466)">
+    <rect width="200" height="80" rx="14" fill="#0B1715" stroke="#BFE6CE" stroke-opacity=".14"/>
+    <text x="18" y="28" class="caption">KNOWLEDGE</text>
+    <text x="18" y="52" class="nodeTitle">FTS5 + 768D</text>
+    <text x="18" y="68" class="tiny">nomic-embed-text</text>
+  </g>
+
+  <!-- Decision hub -->
+  <text x="925" y="175" class="label">03 · DECISION HUB</text>
+  <path d="M830 322H898" stroke="#91F2BC" stroke-width="1.8" marker-end="url(#arrowGreen)"/>
+  <g transform="translate(900 198)">
+    <rect width="440" height="248" rx="22" fill="#0C1815" stroke="#F3B86B" stroke-opacity=".3"/>
+    <rect x="30" y="28" width="120" height="190" rx="22" fill="#030706" stroke="#BFE6CE" stroke-opacity=".23"/>
+    <rect x="38" y="36" width="104" height="174" rx="16" fill="#EDF3EF"/>
+    <rect x="71" y="36" width="38" height="10" rx="0 0 7 7" fill="#030706"/>
+    <rect x="46" y="57" width="88" height="36" rx="8" fill="#DFF1E8"/>
+    <rect x="46" y="101" width="88" height="43" rx="8" fill="#FFFFFF" stroke="#D7E1DB"/>
+    <rect x="46" y="152" width="42" height="22" rx="6" fill="#DDF5E8"/>
+    <rect x="92" y="152" width="42" height="22" rx="6" fill="#E8EBF4"/>
+    <text x="178" y="59" class="caption">TELEGRAM MINI APPS</text>
+    <text x="178" y="88" class="title">Human decision point</text>
+    <text x="178" y="118" class="nodeText">• email reply draft</text>
+    <text x="178" y="141" class="nodeText">• task / event proposal</text>
+    <text x="178" y="164" class="nodeText">• tech-worker handoff</text>
+    <text x="178" y="187" class="nodeText">• acknowledge / snooze / reply</text>
+    <rect x="178" y="199" width="166" height="25" rx="7" fill="#F3B86B" fill-opacity=".08"/>
+    <text x="261" y="216" text-anchor="middle" class="pill" fill="#F3B86B">EXPLICIT APPROVAL</text>
+  </g>
+
+  <!-- Outputs -->
+  <path d="M1120 446V500" stroke="#63796D" stroke-width="1.4" marker-end="url(#arrowMuted)"/>
+  <g transform="translate(900 506)">
+    <rect width="210" height="94" rx="15" fill="#0B1715" stroke="#72DBE7" stroke-opacity=".22"/>
+    <text x="18" y="29" class="caption">CONTROLLED ACTIONS</text>
+    <text x="18" y="55" class="nodeTitle">SMTP / eMU</text>
+    <text x="18" y="76" class="nodeText">only after approval</text>
+  </g>
+  <g transform="translate(1130 506)">
+    <rect width="210" height="94" rx="15" fill="#0B1715" stroke="#91F2BC" stroke-opacity=".22"/>
+    <text x="18" y="29" class="caption">OPERATOR VIEW</text>
+    <text x="18" y="55" class="nodeTitle">Briefings</text>
+    <text x="18" y="76" class="nodeText">exceptions, not noise</text>
+  </g>
+
+  <!-- Tech-worker lane -->
+  <path d="M720 546V630H745" stroke="#AD9CFF" stroke-opacity=".55" stroke-width="1.5" marker-end="url(#arrowMuted)"/>
+  <text x="60" y="666" class="label" fill="#AD9CFF">04 · SPECIALIST HANDOFF</text>
+  <g transform="translate(60 690)">
+    <rect width="1280" height="166" rx="22" fill="#0A1412" stroke="#AD9CFF" stroke-opacity=".22"/>
+    <g transform="translate(26 27)">
+      <rect width="220" height="112" rx="14" fill="#0D1917" stroke="#AD9CFF" stroke-opacity=".18"/>
+      <text x="18" y="27" class="caption">ROUTER</text>
+      <text x="18" y="52" class="nodeTitle">Kanban task</text>
+      <text x="18" y="75" class="nodeText">full context + 6 skills</text>
+      <text x="18" y="95" class="tiny">idempotency · 90 min</text>
+    </g>
+    <path d="M256 83H300" stroke="#AD9CFF" stroke-opacity=".6" marker-end="url(#arrowMuted)"/>
+    <g transform="translate(306 27)">
+      <rect width="220" height="112" rx="14" fill="#0D1917" stroke="#AD9CFF" stroke-opacity=".28"/>
+      <text x="18" y="27" class="caption" fill="#AD9CFF">PROFILE: TECH-WORKER</text>
+      <text x="18" y="52" class="nodeTitle">Isolated analysis</text>
+      <text x="18" y="75" class="nodeText">ERP · SQL · BI · tests</text>
+      <text x="18" y="95" class="tiny">no production writes</text>
+    </g>
+    <path d="M536 83H580" stroke="#AD9CFF" stroke-opacity=".6" marker-end="url(#arrowMuted)"/>
+    <g transform="translate(586 27)">
+      <rect width="220" height="112" rx="14" fill="#0D1917" stroke="#AD9CFF" stroke-opacity=".18"/>
+      <text x="18" y="27" class="caption">DURABLE OUTPUT</text>
+      <text x="18" y="52" class="nodeTitle">REPORT.md</text>
+      <text x="18" y="75" class="nodeText">artifacts + verification</text>
+      <text x="18" y="95" class="tiny">risks · blockers · learning</text>
+    </g>
+    <path d="M816 83H860" stroke="#91F2BC" stroke-opacity=".6" marker-end="url(#arrowGreen)"/>
+    <g transform="translate(866 27)">
+      <rect width="220" height="112" rx="14" fill="#0D1917" stroke="#91F2BC" stroke-opacity=".23"/>
+      <text x="18" y="27" class="caption">ORCHESTRATOR REVIEW</text>
+      <text x="18" y="52" class="nodeTitle">Quality gate</text>
+      <text x="18" y="75" class="nodeText">report + files + evidence</text>
+      <text x="18" y="95" class="tiny">ready / analysis / blocker</text>
+    </g>
+    <path d="M1096 83H1140" stroke="#91F2BC" stroke-opacity=".6" marker-end="url(#arrowGreen)"/>
+    <g transform="translate(1146 27)">
+      <rect width="108" height="112" rx="14" fill="#91F2BC" fill-opacity=".055" stroke="#91F2BC" stroke-opacity=".28"/>
+      <text x="54" y="37" text-anchor="middle" class="caption">HANDOFF</text>
+      <text x="54" y="66" text-anchor="middle" class="nodeTitle">Email</text>
+      <text x="54" y="88" text-anchor="middle" class="tiny">to operator</text>
+    </g>
+  </g>
+
+  <!-- Footer legend -->
+  <g transform="translate(60 886)">
+    <circle cx="4" cy="0" r="4" fill="#91F2BC"/><text x="16" y="4" class="tiny">automated</text>
+    <circle cx="99" cy="0" r="4" fill="#F3B86B"/><text x="111" y="4" class="tiny">human gate</text>
+    <circle cx="211" cy="0" r="4" fill="#AD9CFF"/><text x="223" y="4" class="tiny">specialist profile</text>
+  </g>
+  <text x="1340" y="890" text-anchor="end" class="tiny">43 scheduled automations · proposal-first · read-only default</text>
+</svg>

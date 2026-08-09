@@ -1,0 +1,4 @@
+Contact: https://github.com/arturkozlowski1988/hermes-erp-portfolio/security
+Policy: https://github.com/arturkozlowski1988/hermes-erp-portfolio/security/advisories
+Expires: 2027-08-09
+Preferred-Languages: pl, en

@@ -1,0 +1,16 @@
+# Dependencies
+*.pyc
+__pycache__/
+*.egg-info/
+.env
+.env.*
+*.db
+*.sqlite
+*.sqlite3
+node_modules/
+dist/
+.qa/
+.sass-cache/
+.jekyll-cache/
+_site/
+.jekyll-metadata
