@@ -3019,13 +3019,17 @@ dialog::backdrop {
     padding-block: 86px;
   }
 
-  .site-header {
+  /* A filtered ancestor becomes the containing block for fixed descendants
+     in WebKit/Chromium. Keep it unfiltered so the open nav covers the viewport. */
+  .site-header,
+  .site-header.is-scrolled {
     grid-template-columns: 1fr auto;
     height: 66px;
     padding: 0 16px;
     border-color: var(--line);
-    background: rgba(7, 17, 15, 0.92);
-    backdrop-filter: blur(18px);
+    background: #07110f;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .brand-copy small {
@@ -3069,11 +3073,17 @@ dialog::backdrop {
     z-index: 101;
     inset: 0;
     display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
     flex-direction: column;
     justify-content: center;
     gap: 0;
-    padding: 76px 30px 30px;
-    background: rgba(5, 12, 10, 0.98);
+    padding: calc(76px + env(safe-area-inset-top)) 30px calc(30px + env(safe-area-inset-bottom));
+    overscroll-behavior: contain;
+    background: #050c0a;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);

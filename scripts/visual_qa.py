@@ -65,6 +65,25 @@ with sync_playwright() as p:
     mobile.goto("http://127.0.0.1:4173/", wait_until="networkidle")
     mobile.locator(".nav-toggle").click()
     assert "is-open" in (mobile.locator("#site-nav").get_attribute("class") or "")
+    mobile.wait_for_timeout(300)
+    menu_geometry = mobile.locator("#site-nav").evaluate(
+        """element => {
+            const rect = element.getBoundingClientRect();
+            return {
+                top: rect.top,
+                left: rect.left,
+                width: rect.width,
+                height: rect.height,
+                viewportWidth: window.innerWidth,
+                viewportHeight: window.visualViewport?.height || window.innerHeight,
+            };
+        }"""
+    )
+    assert abs(menu_geometry["top"]) <= 1, menu_geometry
+    assert abs(menu_geometry["left"]) <= 1, menu_geometry
+    assert menu_geometry["width"] >= menu_geometry["viewportWidth"] - 1, menu_geometry
+    assert menu_geometry["height"] >= menu_geometry["viewportHeight"] - 1, menu_geometry
+    mobile.screenshot(path=str(OUT / "mobile-menu-open.png"), full_page=False)
     mobile.locator("[data-mobile-english]").click()
     assert mobile.locator("#english-summary").is_visible()
     assert "is-open" not in (mobile.locator("#site-nav").get_attribute("class") or "")
