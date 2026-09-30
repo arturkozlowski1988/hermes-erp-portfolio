@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artur Kozłowski — projekty zbudowane z pomocą AI</title>
+  <meta name="description" content="Portfolio projektów Artura Kozłowskiego zbudowanych z pomocą AI: automatyzacja ERP, planowanie produkcji, WMS, BI, analiza techniczna i bezpieczne workflowy agentowe.">
+  <meta name="theme-color" content="#07110f">
+  <meta name="author" content="Artur Kozłowski">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://arturkozlowski1988.github.io/hermes-erp-portfolio/ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Artur Kozłowski — co zbudowałem z pomocą AI">
+  <meta property="og:description" content="Od ERP i WMS po APS, BI i agentowe workflowy. Konkretne systemy, mierzalne rezultaty i kontrolowane wdrożenia.">
+  <meta property="og:url" content="https://arturkozlowski1988.github.io/hermes-erp-portfolio/ai/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07110f;--bg2:#0c1714;--panel:#0f1d19;--panel2:#12241f;--line:#244238;
+      --text:#eef8f2;--muted:#9db5aa;--green:#91f2bc;--cyan:#72dbe7;--amber:#f3b86b;--violet:#ad9cff;
+      --shadow:0 24px 70px rgba(0,0,0,.34);--radius:22px
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:
+      radial-gradient(circle at 12% 8%,rgba(145,242,188,.10),transparent 31rem),
+      radial-gradient(circle at 88% 12%,rgba(114,219,231,.08),transparent 32rem),
+      var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;line-height:1.6}
+    a{color:inherit}.shell{width:min(1180px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,17,15,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}.mark{width:38px;height:38px;border:1px solid var(--line);border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#132820,#0a1512);font:700 12px "IBM Plex Mono";color:var(--green)}
+    .brand strong{font-family:Manrope;font-size:14px}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.05em}
+    nav{display:flex;gap:22px;align-items:center}nav a{text-decoration:none;color:#cfe0d7;font-size:14px}nav a:hover{color:var(--green)}
+    .ghost{border:1px solid var(--line);padding:9px 13px;border-radius:999px}
+    .hero{padding:105px 0 72px;position:relative;overflow:hidden}
+    .eyebrow{font:600 12px "IBM Plex Mono";letter-spacing:.16em;color:var(--green);text-transform:uppercase;margin:0 0 20px}
+    h1,h2,h3{font-family:Manrope;margin:0;line-height:1.08}
+    h1{font-size:clamp(42px,7vw,82px);max-width:990px;letter-spacing:-.045em}
+    h1 em{font-style:normal;color:var(--green)}
+    .lead{font-size:clamp(18px,2.2vw,24px);max-width:820px;color:#b9ccc2;margin:28px 0 34px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:13px 18px;font-weight:600;font-size:14px}
+    .primary{background:var(--green);color:#052016}.secondary{border:1px solid var(--line);background:rgba(255,255,255,.02)}
+    .hero-note{margin-top:28px;color:var(--muted);font-size:13px}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:62px}
+    .metric{border:1px solid var(--line);border-radius:18px;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.01));box-shadow:var(--shadow)}
+    .metric strong{display:block;font:800 clamp(28px,4vw,46px) Manrope;color:var(--green)}.metric span{font-size:13px;color:var(--muted)}
+    section{padding:84px 0}.section-kicker{font:600 11px "IBM Plex Mono";letter-spacing:.15em;color:var(--cyan);text-transform:uppercase;margin-bottom:12px}
+    h2{font-size:clamp(32px,4.2vw,52px);letter-spacing:-.03em;max-width:820px}.section-intro{max-width:760px;color:var(--muted);font-size:18px;margin:18px 0 38px}
+    .projects{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{grid-column:span 6;border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:linear-gradient(155deg,var(--panel),#0b1713);position:relative;overflow:hidden}
+    .card::after{content:"";position:absolute;inset:auto -50px -90px auto;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle,rgba(145,242,188,.08),transparent 65%)}
+    .card.wide{grid-column:span 12}.tag{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:5px 9px;font:500 10px "IBM Plex Mono";color:#b9cec4;margin-bottom:18px}
+    .card h3{font-size:25px;margin-bottom:12px}.card p{color:#abc0b5;margin:0 0 18px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.chips span{font:500 10px "IBM Plex Mono";padding:6px 9px;border-radius:999px;background:#0a1512;border:1px solid #203a31;color:#a9c2b6}
+    .result{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06)}.result div{min-width:110px}.result strong{display:block;font:700 19px Manrope;color:var(--cyan)}.result small{color:var(--muted)}
+    .card-link{display:inline-flex;margin-top:18px;text-decoration:none;color:var(--green);font-weight:600;font-size:14px}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:38px}.step{border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--panel)}.step b{display:block;font:600 11px "IBM Plex Mono";color:var(--amber);margin-bottom:10px}.step strong{display:block;font-family:Manrope;margin-bottom:8px}.step p{font-size:13px;color:var(--muted);margin:0}
+    .stack{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:36px}.panel{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:var(--panel)}
+    .panel h3{font-size:24px;margin-bottom:14px}.tool-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.tool{border:1px solid #203a31;border-radius:14px;padding:15px;background:#0a1512}.tool strong{display:block;font-size:14px}.tool small{color:var(--muted)}
+    .safety-list{display:grid;gap:11px}.safety-list div{display:flex;gap:12px;align-items:flex-start}.dot{margin-top:8px;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(145,242,188,.08);flex:none}.safety-list p{margin:0;color:#b9ccc2;font-size:14px}
+    .evidence{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:linear-gradient(140deg,#10211c,#0a1512);display:flex;justify-content:space-between;gap:24px;align-items:center}
+    .evidence p{margin:8px 0 0;color:var(--muted);max-width:760px}.evidence a{text-decoration:none;color:var(--green);font-weight:600;white-space:nowrap}
+    footer{padding:38px 0 52px;color:#789085;font-size:13px;border-top:1px solid rgba(255,255,255,.06)}
+    .reveal{opacity:0;transform:translateY(18px);transition:.6s ease}.reveal.on{opacity:1;transform:none}
+    @media(max-width:900px){
+      nav a:not(.ghost){display:none}.metrics{grid-template-columns:repeat(2,1fr)}.card,.card.wide{grid-column:span 12}.flow{grid-template-columns:1fr 1fr}.stack{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .shell{width:min(100% - 24px,1180px)}.hero{padding-top:72px}.metrics{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.tool-grid{grid-template-columns:1fr}.evidence{display:block}.evidence a{display:inline-block;margin-top:18px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="shell nav">
+    <a class="brand" href="#top"><span class="mark">AK</span><span><strong>Artur Kozłowski</strong><small>AI ENGINEERING PORTFOLIO</small></span></a>
+    <nav aria-label="Nawigacja">
+      <a href="#projekty">Projekty</a><a href="#proces">Proces</a><a href="#narzedzia">Narzędzia</a>
+      <a class="ghost" href="https://github.com/arturkozlowski1988" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="shell">
+      <p class="eyebrow">AI jako narzędzie do budowania działających systemów</p>
+      <h1>Nie kolekcjonuję promptów.<br><em>Buduję rozwiązania, które wykonują pracę.</em></h1>
+      <p class="lead">Łączę AI z ERP, SQL, produkcją, logistyką i automatyzacją. Od analizy problemu, przez kod i testy, po kontrolowany workflow operacyjny — z mierzalnym efektem i człowiekiem w punkcie decyzyjnym.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projekty">Zobacz projekty ↓</a>
+        <a class="btn secondary" href="https://arturkozlowski1988.github.io/hermes-erp-portfolio/" target="_blank" rel="noopener">Case study Hermes ↗</a>
+      </div>
+      <p class="hero-note">Treść przygotowana na podstawie repozytoriów GitHub i dokumentacji roboczej z Google Drive. Dane klientów, hosty i konfiguracje dostępowe zostały celowo pominięte.</p>
+
+      <div class="metrics reveal">
+        <div class="metric"><strong>43</strong><span>aktywne automatyzacje w operacyjnym workflowie ERP</span></div>
+        <div class="metric"><strong>715</strong><span>testów automatycznych: 674 backend + 41 E2E w systemie SCM/APS</span></div>
+        <div class="metric"><strong>107/107</strong><span>udokumentowanych parametrów analizowanej aplikacji magazynowej</span></div>
+        <div class="metric"><strong>33×</strong><span>przyspieszenie ścieżki XML → SQL w konwerterze BI</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projekty">
+    <div class="shell">
+      <p class="section-kicker">Wybrane realizacje</p>
+      <h2>AI nie jest tu dodatkiem. Jest elementem procesu inżynierskiego.</h2>
+      <p class="section-intro">Poniższe projekty pokazują różne role AI: od orkiestracji zadań, przez analizę kodu i danych, po planowanie, dokumentację oraz interfejsy wspierające pracę operacyjną.</p>
+
+      <div class="projects">
+        <article class="card wide reveal">
+          <span class="tag">PRODUKCYJNY WORKFLOW · ERP · AGENTY</span>
+          <h3>Hermes Agent — operacyjny system dla spraw ERP</h3>
+          <p>System łączy pocztę, portal eMU, bazę wiedzy, Telegram Mini Apps, Kanban i specjalistycznego tech-workera. AI klasyfikuje sprawy, buduje kontekst, przygotowuje drafty i deleguje zadania techniczne, ale wysyłka i operacje zapisu pozostają za bramką akceptacji człowieka.</p>
+          <div class="result">
+            <div><strong>43</strong><small>aktywne crony</small></div>
+            <div><strong>human approval</strong><small>dla wysyłki i write operations</small></div>
+            <div><strong>durable reports</strong><small>raport + artefakty + review</small></div>
+          </div>
+          <div class="chips"><span>Hermes Agent</span><span>Telegram Mini Apps</span><span>SQLite + FTS5</span><span>embeddings</span><span>MSSQL</span><span>Playwright</span></div>
+          <a class="card-link" href="https://arturkozlowski1988.github.io/hermes-erp-portfolio/" target="_blank" rel="noopener">Otwórz publiczne case study ↗</a>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">SCM · MRP · APS · ML</span>
+          <h3>AI Supply Assistant + planista APS</h3>
+          <p>Zintegrowany system wspierający dostawy i planowanie produkcji: MRP czasowo-fazowe, finite-capacity scheduling, SMED, kalendarze zasobów, prognozowanie popytu oraz asystent AI do rekomendacji i analizy anomalii.</p>
+          <div class="result"><div><strong>674</strong><small>pytest</small></div><div><strong>41</strong><small>Playwright E2E</small></div></div>
+          <div class="chips"><span>FastAPI</span><span>React 19</span><span>MSSQL</span><span>Redis/RQ</span><span>scikit-learn</span><span>Gemini / Ollama</span></div>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">BI · SQL · AUTOMATYZACJA</span>
+          <h3>Comarch BI Converter</h3>
+          <p>Narzędzie do dwukierunkowej konwersji SQL ↔ XML dla raportów BI, z analizą SQL, walidacją, obsługą wielu plików, podglądem metadanych i responsywnym GUI. Kolejne iteracje były rozwijane poprzez audyt, testy i optymalizację.</p>
+          <div class="result"><div><strong>33×</strong><small>szybsza ekstrakcja</small></div><div><strong>97%</strong><small>redukcji czasu</small></div></div>
+          <div class="chips"><span>Python</span><span>sqlparse</span><span>Tkinter</span><span>threading</span><span>CLI</span></div>
+          <a class="card-link" href="https://github.com/arturkozlowski1988/KonwenterBI-Optima" target="_blank" rel="noopener">Repozytorium publiczne ↗</a>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">ANALIZA TECHNICZNA · WMS · DOKUMENTACJA</span>
+          <h3>Kompendium parametrów aplikacji magazynowej</h3>
+          <p>AI-assisted analiza istniejącej aplikacji pozwoliła zmapować wszystkie parametry konfiguracji, ich wpływ na logikę aplikacji i SQL oraz prześledzić przyczynę konkretnego problemu z rekomendacją lokalizacji magazynowej.</p>
+          <div class="result"><div><strong>107/107</strong><small>parametrów opisanych</small></div><div><strong>root cause</strong><small>odtworzony przepływ decyzji</small></div></div>
+          <div class="chips"><span>.NET / WPF</span><span>SQL</span><span>analiza zależności</span><span>dokumentacja techniczna</span></div>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">VISION AI · MOBILE WMS</span>
+          <h3>AI WMS Mobile</h3>
+          <p>Mobilny system magazynowy wykorzystujący AI do identyfikacji produktu z kodu, analizy przestrzeni na podstawie zdjęć, sugerowania lokalizacji oraz rozmowy audio/wideo z asystentem pomagającym projektować układ magazynu.</p>
+          <div class="chips"><span>React</span><span>Node.js</span><span>SQLite</span><span>Gemini Vision</span><span>Live AI</span><span>mobile-first</span></div>
+        </article>
+
+        <article class="card reveal">
+          <span class="tag">QUALITY · WELDING · DOCUMENT FLOW</span>
+          <h3>WeldMind</h3>
+          <p>System zarządzania WPS, WPQR i kwalifikacjami personelu spawalniczego. Obejmuje statusy, terminy ważności, dokumenty, role, log zmian i eksport PDF — przykład użycia AI do szybkiego zbudowania kompletnego narzędzia domenowego.</p>
+          <div class="chips"><span>React + TypeScript</span><span>Firebase</span><span>Zod</span><span>i18n</span><span>PDF</span><span>audit log</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="proces">
+    <div class="shell">
+      <p class="section-kicker">Sposób pracy</p>
+      <h2>Największa wartość AI pojawia się między pytaniem a wdrożeniem.</h2>
+      <p class="section-intro">Nie traktuję modelu jako generatora kodu. Buduję proces, w którym AI musi korzystać z danych źródłowych, sprawdzać istniejącą implementację, testować wynik i zostawiać dowody wykonania.</p>
+      <div class="flow">
+        <div class="step reveal"><b>01</b><strong>Problem</strong><p>Cel biznesowy, ograniczenia, ryzyko i oczekiwany rezultat.</p></div>
+        <div class="step reveal"><b>02</b><strong>Ground truth</strong><p>Kod, baza, dokumentacja, e-maile, logi i realny stan systemu.</p></div>
+        <div class="step reveal"><b>03</b><strong>Implementacja</strong><p>Agent wykonuje zmianę w ograniczonym zakresie i zgodnie z architekturą.</p></div>
+        <div class="step reveal"><b>04</b><strong>Weryfikacja</strong><p>Testy, lint, porównanie danych, stan przed/po i raport z artefaktami.</p></div>
+        <div class="step reveal"><b>05</b><strong>Decyzja</strong><p>Operacje zewnętrzne i ryzykowne działania przechodzą przez human approval.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="narzedzia">
+    <div class="shell">
+      <p class="section-kicker">Warsztat</p>
+      <h2>Modele AI są jedną warstwą. Resztę robi integracja z narzędziami.</h2>
+      <div class="stack">
+        <div class="panel reveal">
+          <h3>AI + narzędzia</h3>
+          <div class="tool-grid">
+            <div class="tool"><strong>Gemini / lokalne LLM</strong><small>rekomendacje, analiza, vision, agentowe zadania</small></div>
+            <div class="tool"><strong>GitHub Copilot / coding agents</strong><small>praca w repozytorium, refaktoryzacja, audyt i testy</small></div>
+            <div class="tool"><strong>MCP</strong><small>bezpośredni dostęp do GitHub, SQL i narzędzi roboczych</small></div>
+            <div class="tool"><strong>GitHub + Google Drive</strong><small>kod, historia zmian, dokumentacja i dowody wykonania</small></div>
+            <div class="tool"><strong>MSSQL / SQLite / Redis</strong><small>dane ERP, pamięć aplikacyjna i kolejki</small></div>
+            <div class="tool"><strong>Playwright / pytest</strong><small>automatyczna weryfikacja funkcji i interfejsu</small></div>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <h3>Bezpieczne użycie AI</h3>
+          <div class="safety-list">
+            <div><span class="dot"></span><p>Brak operacji produkcyjnych „na słowo” — najpierw dane źródłowe i weryfikacja stanu.</p></div>
+            <div><span class="dot"></span><p>Write operations rozdzielone od analizy i często wymagające osobnej akceptacji.</p></div>
+            <div><span class="dot"></span><p>Zmiany w danych poprzedzone backupem, transakcją albo testowym środowiskiem.</p></div>
+            <div><span class="dot"></span><p>Agent nie deklaruje sukcesu bez testów, logów lub trwałego raportu.</p></div>
+            <div><span class="dot"></span><p>Prywatne dane klientów i konfiguracje techniczne nie są częścią publicznego portfolio.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell">
+      <div class="evidence reveal">
+        <div>
+          <p class="section-kicker" style="margin:0">Źródła</p>
+          <h3>Portfolio oparte na realnych artefaktach, nie na deklaracjach.</h3>
+          <p>Podsumowanie powstało na bazie repozytoriów GitHub, README projektów oraz dokumentacji roboczej przechowywanej na Google Drive. Stan źródeł: 30.09.2026.</p>
+        </div>
+        <a href="https://github.com/arturkozlowski1988" target="_blank" rel="noopener">Zobacz profil GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell">Artur Kozłowski · AI Engineering × ERP · 2026</div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
